@@ -1,35 +1,34 @@
-# BRIEF REACT JS 
-***
-## Social Networks
+# Share me
+Social media make with a tutoriel - [DEMO](https://share-me-baudemarie.netlify.app/)
 
-### Development and deployment of a social network
+![image info](./front-end/src/assets/demo.png)
 
-### with the use of React, JavaScript and
+### Make with ...
+![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB) ![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white) Sanity
 
-### Tailwind for the part front-end.
 
-***
+## The tutoriel
+This project is a reproduction of the [tutoriel](https://www.youtube.com/watch?v=1RHDhtbqo94&list=WL&index=69&t=377s
+) by JavaScript Mastery _alias_ [@adrianhajdin](https://github.com/adrianhajdin).
 
-***
-### Technology to use:
-* [HTML 5](https://developer.mozilla.org/fr/docs/orphaned/Web/Guide/HTML/HTML5) 
+It's a small social network, with google authentication, pin creation, deletion and registration, containing an image and some information.
+Search and filter are available.
 
-* [Tailwind CSS](https://tailwindcss.com/)
 
-* [Javascript](https://fr.javascript.info/) 
+## Installation
 
-* [Node js](https://nodejs.org/en/docs/)
+To test the project, you have to make a git clone or download the zip on your computer.
+With the terminal, go to the project then to the 'front-end' section.
 
-* [React JS](https://fr.reactjs.org/docs/) 
+Execute command ``npm i`` in the terminal to install all dependencies.
 
-* [Sanity](https://www.sanity.io/) 
 
-* [Netlify](https://www.netlify.com/)
+## Versions
+**Last version :** 1.0
 
-* [Google Cloud](https://console.cloud.google.com/getting-started?pli=1)
 
-![HTML5](https://img.icons8.com/color/48/000000/html-5--v1.png) ![CSS](https://img.icons8.com/color/48/000000/css3.png) ![Javascript](https://img.icons8.com/color/48/000000/javascript--v1.png) ![NodeJs](https://img.icons8.com/color/48/000000/nodejs.png) ![React](https://img.icons8.com/office/40/000000/react.png) ![Google cloud](https://img.icons8.com/color/48/000000/google-cloud.png)
-
-***
-
-<a href="https://icons8.com/">Origin of the icons</a>
+## Authors
+Project realized with :
+* **Antonio Robles** _alias_ [@anto-d88](https://github.com/anto-d88)
+* **Hamid Berkaine** _alias_ [@IdurarDev](https://github.com/IdurarDev)
+* **Marie Baude** _alias_ [@MarieBaude](https://github.com/MarieBaude)
