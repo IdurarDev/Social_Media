@@ -12,6 +12,9 @@ const PinDetail = ( { user }) => {
   const [pins, setPins] = useState(null); 
   const [pindetails, setPindetails] = useState(null);
   const [comment, setComment] = useState('');
+  const [addingComment, setAddingComment] = useState(false);
+  const { pinId } = useParams()
+   
   return (
     <div>
         PinDetail
