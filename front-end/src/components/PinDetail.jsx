@@ -10,11 +10,13 @@ import Spinner from './Spinner';
 
 const PinDetail = ( { user }) => {
   const [pins, setPins] = useState(null); 
-  const [pindetails, setPindetails] = useState(null);
+  const [pinDetail, setPinDetail] = useState(null);
   const [comment, setComment] = useState('');
   const [addingComment, setAddingComment] = useState(false);
   const { pinId } = useParams()
-   
+  
+  if (!pinDetail) return <Spinner message="Loading pin..."/>
+
   return (
     <div>
         PinDetail
