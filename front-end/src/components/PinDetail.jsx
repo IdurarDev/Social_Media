@@ -7,6 +7,7 @@ import { client, urlFor } from "../client";
 import MasonryLayout from "./MasonryLayout";
 import { pinDetailMorePinQuery, pinDetailQuery } from "../utils/data";
 import Spinner from "./Spinner";
+import { IfStatement } from "requirejs";
 
 const PinDetail = ({ user }) => {
   const [pins, setPins] = useState(null);
@@ -83,8 +84,19 @@ const PinDetail = ({ user }) => {
           <p className='font-semibold capitalize'>
             {pinDetail.postedBy?.userName}            
           </p>
-
         </Link>
+        <h2 className="mt-5 text-1xl">Comments</h2>
+        <div className="max-h-370 overflow-y-auto">
+          {pinDetail?.comments?.map((comment, i) => (
+            <div key={i} className="flex gap-2 mt-5 items-center bg-white rounded-lg">
+               <img 
+                src={comment.postedBy.image} 
+                alt="user-profile"
+                className="w-10 h-10 rounded-full cursor-pointer"  
+               />
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   ); 
