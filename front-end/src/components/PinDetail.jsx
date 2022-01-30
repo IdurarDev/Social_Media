@@ -14,8 +14,6 @@ const PinDetail = ( { user }) => {
   const [comment, setComment] = useState('');
   const [addingComment, setAddingComment] = useState(false);
   const { pinId } = useParams()
-  
-  if (!pinDetail) return <Spinner message="Loading pin..."/>
 
   const fetchPinDetails = () => {
     let query = pinDetailQuery(pinId);
@@ -34,8 +32,16 @@ const PinDetail = ( { user }) => {
         })
     }
   }
+
+  useEffect(() => {
+    fetchPinDetails();
+  }, [pinId]);
+  
+  if (!pinDetail) return <Spinner message="Loading pin..."/>
+
+
   return (
-    <div>
+    <div >
         PinDetail
     </div>
     );
