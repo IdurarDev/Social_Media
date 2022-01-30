@@ -67,9 +67,13 @@ const CreatePin = ({ user }) => {
          category,
        }
        client.create(doc)
-        .then(() => {
+        .then(() => { 
           navigate('/')
         })
+    } else {
+      setFields(true)
+
+      setTimeout(() => setFields(false), 2000)
     }
   }
   return (
