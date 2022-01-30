@@ -1,6 +1,17 @@
-import React from 'react';
+import React, { useState , useEffect  } from 'react';
+import { MdDownloadForOffline  } from 'react-icons/md';
+import { Link, useParams } from 'react-router-dom';
+import { v4 as uuidv4 } from 'uuid';
 
-const PinDetail = () => {
+import { client, urlFor } from '../client';
+import MasonryLayout from './MasonryLayout';
+import { pinDetailMorePinQuery, pinDetailQuery } from '../utils/data';
+import Spinner from './Spinner';
+
+const PinDetail = ( { user }) => {
+  const [pins, setPins] = useState(null); 
+  const [pindetails, setPindetails] = useState(null);
+  const [comment, setComment] = useState('');
   return (
     <div>
         PinDetail
