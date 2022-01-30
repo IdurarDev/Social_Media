@@ -73,7 +73,7 @@ const PinDetail = ({ user }) => {
         </div>
         <Link 
           to={`user-profile/${pinDetail.postedBy?._id}`}
-          className='flex gap-2 mt-2 items-center'
+          className='flex gap-2 mt-5 items-center bg-white rounded-lg'
         >
           <img 
             className='w-8 h-8 rounded-full object-cover'
