@@ -7,12 +7,12 @@ import { client, urlFor } from "../client";
 import MasonryLayout from "./MasonryLayout";
 import { pinDetailMorePinQuery, pinDetailQuery } from "../utils/data";
 import Spinner from "./Spinner";
-import { IfStatement } from "requirejs";
+
 
 const PinDetail = ({ user }) => {
   const [pins, setPins] = useState(null);
   const [pinDetail, setPinDetail] = useState(null);
-  const [comment, setComment] = useState("");
+  const [comment, setComment] = useState('');
   const [addingComment, setAddingComment] = useState(false);
   const { pinId } = useParams();
 
@@ -23,10 +23,20 @@ const PinDetail = ({ user }) => {
       client
         .patch(pinId)
         .setIfMissing({ comments: []})
-        .insert('after', 'comment[-1', [{ 
+        .insert('after', 'comments[-1]', [{ 
           comment, 
           _key: uuidv4(),
+          postedBy: {
+            _type: 'postedBy',
+            _ref: user._id
+          }
         }])
+        .commit()
+        .then(() => {
+          fetchPinDetails();
+          setComment('');
+          setAddingComment(false);
+        })
     }
   }
   const fetchPinDetails = () => {
@@ -139,7 +149,7 @@ const PinDetail = ({ user }) => {
             className="bg-red-500 text-white rounded-full px-6 py-2 font-semibold text-base outline-none"
             onClick={addComment}
           >
-            {addingComment ? 'Posting th comment...' : 'Posted!'}
+            {addingComment ? 'Posting the comment...' : 'Post'}
           </button>
         </div>
       </div>
