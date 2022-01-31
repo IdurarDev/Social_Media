@@ -6,10 +6,12 @@ import { feedQuery, searchQuery } from '../utils/data';
 import Spinner  from './Spinner';
 
 const Search = ( { searchTerm } ) => {
+  const [pins, setPins] = useState(null);
+  const [loading, setLoading] = useState(true);
   
   return (
     <div>
-        Search
+        {loading && <Spinner message="Searching for pins..." />} 
     </div>
     );
 };
