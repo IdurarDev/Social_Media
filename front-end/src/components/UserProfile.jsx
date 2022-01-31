@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import { AiOutlineLagout, AiOutlineLogout } from 'react-icons/ai'; 
+import { AiOutlineLogout } from 'react-icons/ai'; 
 import { useParams, useNavigate } from 'react-router-dom';
 import { GoogleLogout } from 'react-google-login';
-import { userCreatedPinsQuery, userQuery, userSaved} from '../utils/data';
+import { userCreatedPinsQuery, userQuery, userSavedPinsQuery} from '../utils/data';
 import { client } from '../client';
 import MasonryLayout from './MasonryLayout';
 import Spinner from './Spinner';
