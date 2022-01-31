@@ -62,6 +62,7 @@ const PinDetail = ({ user }) => {
   if (!pinDetail) return <Spinner message="Loading pin..." />;
 
   return (
+    <>
     <div
       className="flex xl-flex-row flex-col m-auto bg-white"
       style={{ maxWidth: "1500", borderRadius: "32px" }}
@@ -107,7 +108,7 @@ const PinDetail = ({ user }) => {
           <p className="font-semibold capitalize">
             {pinDetail.postedBy?.userName}
           </p>
-        </Link>
+        </Link> 
         <h2 className="mt-5 text-2xl">Comments</h2>
         <div className="max-h-370 overflow-y-auto">
           {pinDetail?.comments?.map((comment, i) => (
@@ -154,6 +155,17 @@ const PinDetail = ({ user }) => {
         </div>
       </div>
     </div>
+    {pins?.length > 0 ? (
+      <>
+        <h2 className="text-center font-bold text-2xl mt-8 mt-4">
+          More like this
+        </h2>
+        <MasonryLayout pins={pins} />
+      </>
+    ):(
+      <Spinner message='Loading more pins'/>
+    )}
+    </>
   );
 };
 
