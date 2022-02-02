@@ -163,7 +163,7 @@ const PinDetail = ({ user }) => {
         <MasonryLayout pins={pins} />
       </>
     ):(
-      <Spinner message='Loading more pins'/>
+      <h3 className="text-center font-bold text-2xl mt-8 mt-4">No Pins Found</h3>
     )}
     </>
   );
